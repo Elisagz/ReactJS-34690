@@ -26,8 +26,8 @@
 
 
 // Null
-const descuento = null
-console.log(typeof descuento)
+// const descuento = null
+// console.log(typeof descuento)
 
 //----------------------------------------------------------------------------------
 
@@ -53,7 +53,7 @@ console.log(typeof descuento)
 
 //Destructuring sacar el valor de una estructura
 
-// const producto ={
+// const producto = {
 //     nombre: "tablet",
 //     precio:20,
 //     disponible:true
@@ -71,7 +71,10 @@ console.log(typeof descuento)
 // const newArray =[...array, a, ...array2]
 // console.log(newArray)
 
-// objects
+
+//-----------------------------------Clase 2--------------------------------------------------
+
+//Spread operator objects
 // const producto = {
 //     nombre: "Tablet",
 //     precio: 300,
@@ -82,15 +85,24 @@ console.log(typeof descuento)
 //     Premium: true,
    
 // }
-// const nuevoObjeto ={...producto,...cliente}
+// const nuevoObjeto = {...producto,...cliente}
 // console.log(nuevoObjeto)
-// const nuevoObjeto2 ={
+
+// const nuevoObjeto2 = {
 //     producto:{...producto},
 //     cliente: {...cliente}
 // }
 // console.log(nuevoObjeto2)
 
+//Spread operator en tipo objeto
+// let obj1 = { foo: 'bar', x: 42 };
+// let obj2 = { foo: 'baz', y: 13 };
 
+// let clonedObj = { ...obj1 };
+// console.log(clonedObj)
+
+// let mergedObj = { ...obj1, ...obj2 };
+// console.log(mergedObj)
 
 
 //--------------------------------------------------------------------------------------
@@ -98,15 +110,16 @@ console.log(typeof descuento)
 
 // Template Strings ` 
 
-// const producto = "Tablet de 12 pulgadas"
-// const precio = 400
-// const marca = "Orange"
+const producto = "Tablet de 12 pulgadas"
+const precio = 400
+const marca = "Orange"
 
-// function textoDeFuncion() {
-//     return "Este texto proviene de la función"
-// }
+function textoDeFuncion() {
+    return "Este texto proviene de la función"
+}
+// const variable = textoDeFuncion()
 
-// console.log( producto + " $" + precio + " Dolares, Marca: " + marca )
+// console.log( "Voy a imorimir los iguiente:" + producto + " $" + precio + " Dolares, Marca: " + marca )
 
 // console.log(`${producto} $${precio} Dolares, Marca: ${marca}, ${textoDeFuncion()}`)
 
@@ -115,28 +128,77 @@ console.log(typeof descuento)
 // let apellido ='abramov'
 
 /*antes*/
-// console.log("mi nombre es: "+ nombre+ " el apellido es: \n"+ apellido);
+// console.log("mi nombre es: "+ nombre + " el apellido es: \n"+ apellido);
 
 /*Ahora*/
 // console.log(`mi nombre es ${nombre}, y mi apellido es:
 // ${apellido}`);
 
 
-
 //Valores por defecto
 
-// function saludo(nombre="coder"){
+// function saludo(nombre = "coder"){
 //     console.log(nombre)
 // }
 
 // saludo('dan')
 // saludo(null)
-// saludo(undefined)
-// saludo()
+//saludo(undefined)
+//saludo()
 
 
-  
+//Filter
+const tecnologias = ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js']
 
+// const nuevoArray = tecnologias.filter( function(tech) {
+//     console.log(tech)
+// })
+
+// const nuevoArray = tecnologias.filter( function(tech) {
+//     return tech === 'React'
+// })
+
+// console.log(nuevoArray)
+
+//Map
+// const nuevoArray = tecnologias.map( function(tech) {
+//     if(tech === 'HTML') {
+//         return 'GraphQL'
+//     } else {
+//         return tech
+//     }
+// })
+
+// console.table(tecnologias)
+// console.table(nuevoArray)
+
+//forEach
+// tecnologias.forEach( (tech, index) => console.log(index))
+
+
+// console.log(arrayMap)
+
+
+//-----------------------------------------------------------------------------
+// Mas metodos 
+// const tecnologias = ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js']
+// const numeros = [10, 20, 30]
+
+// Comprobar si un elemento existe en el array
+// const resultado = tecnologias.includes('GraphQL')
+
+// Some - Devuelve si al menos uno cumple la condición
+// const resultado = numeros.some( numero => numero > 15)
+
+// Find - Devuelve el primer elemento que cumpla la condicion
+// const resultado = numeros.find( numero => numero > 5)
+
+// Every - Retorna true o false si todos cumplen la condición
+// const resultado = numeros.every( numero => numero > 9)
+
+// Reduce - Acumulando en el total
+// const resultado = numeros.reduce( (total, numero) => numero + total, 0)
+// console.log(resultado)
 
 
 
