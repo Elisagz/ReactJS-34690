@@ -1,60 +1,52 @@
-import { useState } from 'react'
-import logo from './logo.svg'
+
+import react2 from './react2.jpeg'
 import './App.css'
+import Navbar from './components/Navbar'
+import Novedades from './components/Novedades'
+import Error from './components/Error'
+import Mensaje from './components/Mensaje'
 
-function App() {
-  // const condicion = true
-  // let resultado = null
+export function Titulo(){
+  return(
+    <div>Soy el titulo</div>
+  )
+}
 
-  //  if(condicion){
-  //    resultado = 'El resultado es correcto'
-  //  }else{
-  //    resultado = 'El resultado no es correcto'
-  //  }
-  //`
-  // console.log("voy a imprimir" + resultado)
+ function App() {
+  // `
+  let open = true
+  const suma=()=>{
+    console.log("estoy sumando")
+  }
+  if(open){
+    console.log("esta abierto")
 
-  
-  // resultado = condicion ? "El resultado es correcto" :"El resultado no es correcto"
-  // console.log(`Voy a imprimir: ${resultado}`)
+  }else{
+    console.log("esta cerrado")
 
-  //formas de usar operadores
-  //condicion ? si : no,
-  // condicion && ,
-  // condicion ||
+  } 
+  //<Navbar /> === Navbar()
+  // <Navbar titulo ="nombredemiproyecto"/> == Navbar('nombredemiproyecto')
+  let subtitulo="Componentes"
+  return (  
+        <>
+       {/* {open ?"esta open":"no esta open"} */}
+          <div className="App" style={{paddingTop:10}}>
+              <h1>Hola</h1>
+              {/* <div>Saludos </div> */}
+              {/* <button onClick={suma} >Clickeame</button> */}
+              {/* <img src={react2} alt="" /> */}
+              <input />
+          </div>
+          <h1>Hola</h1>
+          <Navbar titulo="nombreProyecto" subtitulo={subtitulo} />
+          <Novedades />
+          <Error>
+             <Mensaje />
+            </Error>
 
-  //sugar sintax
-  // console.log(`Voy a imprimir: ${condicion ? "El resultado es correcto" :"El resultado no es correcto"}`)
-  // console.log(`Voy a imprimir: ${resultado}`)
 
-  //campos dinamicos
-  // let id ='1'
-  // const objeto ={
-  //   nombre: "Leo",
-  //   apellido: 'Hernandez',
-  //   ['clienteid_'+id]: 'know78dhwe87e'
-  // }
-  // console.log(objeto)
-
-  //destructuring 
-  // const {nombre:name} = objeto
-  // console.log(name)
-
-  // asignacion en destructuracion
-  // const {nombre:name, edad=7} = objeto
-  // console.log(edad)
-  
-  return (
-    <>
-        <div className="App" style={{paddingTop:10}}>
-          <div>Hola</div>
-          <img src=""/> 
-        </div>
-
-        <div>
-          <label htmlFor="">Hola otra vez</label>
-        </div>
-    </>
+        </>
   )
 }
 
