@@ -1,9 +1,9 @@
 
 
-const Error = ({children}) => {
-    console.log({children})
+const Error = ({mensaje, componente}) => {
+    // console.log(props)
   return (
-    <div>{children}</div>
+    <div>{props.mensaje})</div>
   )
 }
 

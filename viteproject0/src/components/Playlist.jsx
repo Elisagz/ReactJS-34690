@@ -1,13 +1,17 @@
 import  Titulo  from "./Titulo"
 
 
-const Playlist = ({titulo, descripcion, saludo}) => {
+const Playlist = ({playlist, songs}) => {
+  
+  console.log(songs)
   return (
     <div style={{background:"red"}}>
         {/* <h1>{titulo}</h1> */}
-        <Titulo titulo={titulo} />
-        <p>{descripcion}</p>
-        <button onClick={saludo}>Saludar</button>
+        <Titulo titulo={playlist.titulo} />
+        <p>{playlist.descripcion}</p>
+        <p>{playlist.autor}</p>
+        {songs.map((item,i)=><li key={i}>{item}</li>)}
+        {/* <button onClick={saludo}>Saludar</button> */}
     </div>
   )
 }
