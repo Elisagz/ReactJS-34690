@@ -2,6 +2,7 @@
 import './App.css'
 import { useState } from 'react'
 import Hooks from './components/Hooks'
+import ProductListContainer from './components/ProductListContainer'
 
 export function Titulo(){
   return(
@@ -26,7 +27,8 @@ export function Titulo(){
           <Novedades />
           <Error mensaje="ERROR MSG" componente={Mensaje}/> */}
           {/* <CicloVidaCC /> */}
-          <Hooks />
+          {/* <Hooks /> */}
+          <ProductListContainer />
 
         </>
   )
